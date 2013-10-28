@@ -33,7 +33,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self save];
+    //[self save];
 }
 
 - (void)populateView

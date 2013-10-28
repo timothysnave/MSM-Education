@@ -525,7 +525,13 @@
     NSString *x = @"setValue('";
     x = [x stringByAppendingString:element];
     x = [x stringByAppendingString:@"','"];
-    x = [x stringByAppendingString:contents];
+    
+    
+    NSString *s = [contents stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
+    s = [contents stringByReplacingOccurrencesOfString:@"'" withString:@"\\'"];
+    
+    
+    x = [x stringByAppendingString:s];
     x = [x stringByAppendingString:@"')"];
     
     return x;
